@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+import { PlanesService } from 'src/app/services/planes.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,14 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent {
 
-  constructor(private loginService:LoginService, private router:Router) {}
+  constructor(private loginService:LoginService, private router:Router, planesService:PlanesService) 
+  {
+    planesService.getPlanes().subscribe(
+      (data) => {
+        router.navigate(['/main']);
+      }
+    )
+  }
 
   email:string = "";
   password:string = "";
