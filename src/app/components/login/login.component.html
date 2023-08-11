@@ -1,36 +1,18 @@
-<<<<<<< HEAD
-<mat-form-field>
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
-=======
 <div class="container" style="width: 65vw;">
-  <form onsubmit="submit()">
+  <form>
     <div class="form-group">
       <label for="emailInput">Correo electrónico:</label>
-      <input type="email" [(ngModel)]="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Correo electrónico">
-      <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu direccipon de email.</small>
+      <input type="email" [(ngModel)]="email" name="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Correo electrónico">
+      <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu dirección de correo electrónico.</small>
     </div>
     <div class="form-group">
       <label for="passInput">Contraseña</label>
-      <input type="password" class="form-control" id="passInput" placeholder="Contraseña">
+      <input type="password" [(ngModel)]="password" name="password" class="form-control" id="passInput" placeholder="Contraseña">
     </div>
     <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="checkRecordarme">
       <label class="form-check-label" for="checkRecordarme">Recordarme</label>
     </div>
-    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-</form>
+    <button type="submit" class="btn btn-primary" (click)="submit()">Iniciar Sesión</button>
+  </form>
 </div>
->>>>>>> b9db15402d41dcdd3a3749c9e1c67bfb51e92599

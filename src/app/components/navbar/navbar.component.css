@@ -1,0 +1,21 @@
+.mobile-nav {
+  background: #e38416;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 1px 1px #000000
+}
+
+.bloc-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i{
+  font-size: 35px;
+  color: #000000;
+}
