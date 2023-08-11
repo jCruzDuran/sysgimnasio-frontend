@@ -8,13 +8,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { IndexComponent } from './components/index/index.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RutinaComponent } from './components/rutina/rutina.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    IndexComponent
+    IndexComponent,
+    RutinaComponent
   ],
   imports: [
     BrowserModule,
