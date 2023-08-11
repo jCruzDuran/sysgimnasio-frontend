@@ -5,6 +5,7 @@ import { IndexComponent } from './components/index/index.component';
 import { RutinaComponent } from './components/rutina/rutina.component';
 import { PlanesComponent } from './components/planes/planes.component';
 import { EjerciciosComponent } from './components/ejercicios/ejercicios.component';
+import { CobrosComponent } from './components/cobros/cobros.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'rutina', component: RutinaComponent},
   {path: 'planes', component: PlanesComponent},
   {path: 'ejercicios', component: EjerciciosComponent},
+  {path: 'cobros', component: CobrosComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
