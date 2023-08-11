@@ -4,12 +4,14 @@ import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
 import { RutinaComponent } from './components/rutina/rutina.component';
 import { PlanesComponent } from './components/planes/planes.component';
+import { EjerciciosComponent } from './components/ejercicios/ejercicios.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'main', component: IndexComponent},
   {path: 'rutina', component: RutinaComponent},
   {path: 'planes', component: PlanesComponent},
+  {path: 'ejercicios', component: EjerciciosComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
