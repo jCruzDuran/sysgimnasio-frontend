@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RutinaComponent } from './components/rutina/rutina.component';
 import { PlanesComponent } from './components/planes/planes.component';
 import { EjerciciosComponent } from './components/ejercicios/ejercicios.component';
+import { CobrosComponent } from './components/cobros/cobros.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EjerciciosComponent } from './components/ejercicios/ejercicios.componen
     IndexComponent,
     RutinaComponent,
     PlanesComponent,
-    EjerciciosComponent
+    EjerciciosComponent,
+    CobrosComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,
