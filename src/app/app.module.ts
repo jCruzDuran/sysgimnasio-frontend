@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { IndexComponent } from './components/index/index.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RutinaComponent } from './components/rutina/rutina.component';
+import { PlanesComponent } from './components/planes/planes.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RutinaComponent } from './components/rutina/rutina.component';
     LoginComponent,
     NavbarComponent,
     IndexComponent,
-    RutinaComponent
+    RutinaComponent,
+    PlanesComponent
   ],
   imports: [
     BrowserModule,
