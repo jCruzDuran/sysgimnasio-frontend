@@ -8,6 +8,6 @@ html, body {
     background-image: url('./assets/images/fondo.jpg');
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
-    background-position: center; /* Centra la imagen */
+    background-position:right;
   }
   
