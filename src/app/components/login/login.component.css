@@ -1,4 +1,39 @@
 #formLogin{
     height: 100vh; /* Ajusta la altura al 100% del viewport */
-    width: 65vw;
+    width: 90vw;
+}
+/* Estilos para los iconos de los campos de entrada */
+.input-icon {
+    position: relative;
+  }
+  
+  .input-icon i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #383838;
+  }
+  
+  /* Estilo para los campos de entrada con iconos */
+  .input-with-icon {
+    padding-left: 40px; /* Margen izquierdo para el espacio del icono */
+  }
+  
+  /* Estilos adicionales para decoración (puedes ajustarlos según tu preferencia) */
+  .container-login {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.225);
+  }
+
+.btn{
+    background-color: #383838;
+    border-color: #383838;
+}
+
+.btn:hover{
+    background-color: #0c0c0c;
 }
