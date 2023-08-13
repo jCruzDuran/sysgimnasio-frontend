@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Rutina } from 'src/models/rutina';
+import { Ejercicio } from 'src/models/ejercicio';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RutinasService {
+export class EjerciciosService {
 
-  private apiURL = 'http://localhost:8080/api/rutinas';
+  private apiURL = 'http://localhost:8080/api/ejercicios';
 
   token = localStorage.getItem('token') || '';
 
@@ -20,19 +20,19 @@ export class RutinasService {
 
   constructor(private http: HttpClient) { }
 
-  getRutinas() {
+  getEjercicios() {
     return this.http.get(this.apiURL, this.httpOptions);
   }
 
-  postRutinas(rutina:Rutina) {
-    return this.http.post(this.apiURL, rutina, this.httpOptions);
+  postEjercicios(ejercicio:Ejercicio) {
+    return this.http.post(this.apiURL, ejercicio, this.httpOptions);
   }
 
-  putRutinas(rutina:Rutina) {
-    return this.http.put(this.apiURL, rutina, this.httpOptions);
+  putEjercicios(ejercicio:Ejercicio) {
+    return this.http.put(this.apiURL, ejercicio, this.httpOptions);
   }
 
-  deleteRutinas() {
+  deleteEjercicios() {
     return this.http.delete(this.apiURL, this.httpOptions);
   }
 
