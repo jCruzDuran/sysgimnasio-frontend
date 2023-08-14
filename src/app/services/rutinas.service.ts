@@ -32,8 +32,10 @@ export class RutinasService {
     return this.http.put(this.apiURL, rutina, this.httpOptions);
   }
 
-  deleteRutinas() {
-    return this.http.delete(this.apiURL, this.httpOptions);
+  deleteRutina(idRutina: number) {
+    const url = `${this.apiURL}/${idRutina}`;
+    return this.http.delete(url, this.httpOptions);
   }
+  
 
 }

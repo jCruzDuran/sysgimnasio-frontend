@@ -32,7 +32,9 @@ export class UsuariosService {
     return this.http.put(this.apiURL, usuario, this.httpOptions);
   }
 
-  deleteUsuarios() {
-    return this.http.delete(this.apiURL, this.httpOptions);
+  deleteUsuarios(idUsuario: number) {
+    const url = `${this.apiURL}/${idUsuario}`;
+    return this.http.delete(url, this.httpOptions);
   }
+  
 }

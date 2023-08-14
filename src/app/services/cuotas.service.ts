@@ -32,8 +32,9 @@ export class CuotasService {
     return this.http.put(this.apiURL, cuota, this.httpOptions);
   }
 
-  deleteCuotas() {
-    return this.http.delete(this.apiURL, this.httpOptions);
+  deleteCuotas(idCuota: number) {
+    const url = `${this.apiURL}/${idCuota}`;
+    return this.http.delete(url, this.httpOptions);
   }
 
 }

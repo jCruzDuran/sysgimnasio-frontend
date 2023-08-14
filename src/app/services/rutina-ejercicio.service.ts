@@ -32,7 +32,8 @@ export class RutinaEjercicioService {
     return this.http.put(this.apiURL, rutinaEjercicio, this.httpOptions);
   }
 
-  deleteRutinaEjercicio() {
-    return this.http.delete(this.apiURL, this.httpOptions);
+  deleteRutinaEjercicio(idEjercicio: number, idRutina: number) {
+    const url = `${this.apiURL}/${idEjercicio}/${idRutina}`;
+    return this.http.delete(url, this.httpOptions);
   }
 }

@@ -32,7 +32,8 @@ export class DescripcionejercicioService {
     return this.http.put(this.apiURL, descripcionEjercicio, this.httpOptions);
   }
 
-  deleteDescripcionejercicio() {
-    return this.http.delete(this.apiURL, this.httpOptions);
+  deleteDescripcionEjercicio(idDescripcionEjercicio: number) {
+    const url = `${this.apiURL}/${idDescripcionEjercicio}`;
+    return this.http.delete(url, this.httpOptions);
   }
 }
