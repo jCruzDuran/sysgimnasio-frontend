@@ -12,14 +12,15 @@ export class PlanesService {
 
   token = localStorage.getItem('token') || '';
 
-  getPlanes() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': this.token
-      })
-    };
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': this.token
+    })
+  };
 
-    return this.http.get(this.apiURL, httpOptions);
+  getPlanes() {
+
+    return this.http.get(this.apiURL, this.httpOptions);
   }
 }
