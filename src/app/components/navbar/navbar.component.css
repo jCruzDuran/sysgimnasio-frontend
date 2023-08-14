@@ -3,7 +3,7 @@
 }
 
 .mobile-nav {
-  background: #1c1b1b;
+  background: #fff;
   position: fixed;
   bottom: 0;
   height: 65px;
@@ -20,5 +20,5 @@
 
 i{
   font-size: 35px;
-  color: #ca5705;
+  color: #f56600;
 }
