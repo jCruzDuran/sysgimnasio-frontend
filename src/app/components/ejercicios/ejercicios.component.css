@@ -1,0 +1,13 @@
+.container-fluid{
+    background-color: #000000dd;
+    min-height: 90vh;
+    position: absolute;
+    top: 45px;
+    z-index: -1;
+}
+
+.title{
+    color: #fff;
+    font-size: 40px;
+    margin-top: 25px;
+}
