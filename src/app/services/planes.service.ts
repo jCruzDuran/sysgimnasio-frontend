@@ -22,6 +22,13 @@ export class PlanesService {
   constructor(private http: HttpClient) { }
 
 
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': this.token
+    })
+  };
+
   getPlanes() {
     return this.http.get(this.apiURL, this.httpOptions);
   }
