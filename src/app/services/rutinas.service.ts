@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Plan } from 'src/models/plan';
+import { Rutina } from 'src/models/rutina';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PlanesService {
+export class RutinasService {
 
-  private apiURL = 'http://localhost:8080/api/planes';
+  private apiURL = 'http://localhost:8080/api/rutinas';
 
   token = localStorage.getItem('token') || '';
 
@@ -18,30 +18,21 @@ export class PlanesService {
     })
   };
 
-
   constructor(private http: HttpClient) { }
 
-
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': this.token
-    })
-  };
-
-  getPlanes() {
+  getRutinas() {
     return this.http.get(this.apiURL, this.httpOptions);
   }
 
-  postPlanes(plan:Plan) {
-    return this.http.post(this.apiURL, plan, this.httpOptions);
+  postRutinas(rutina:Rutina) {
+    return this.http.post(this.apiURL, rutina, this.httpOptions);
   }
 
-  putPlanes(plan:Plan) {
-    return this.http.put(this.apiURL, plan, this.httpOptions);
+  putRutinas(rutina:Rutina) {
+    return this.http.put(this.apiURL, rutina, this.httpOptions);
   }
 
-  deletePlanes() {
+  deleteRutinas() {
     return this.http.delete(this.apiURL, this.httpOptions);
   }
 
