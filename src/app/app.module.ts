@@ -13,6 +13,7 @@ import { PlanesComponent } from './components/planes/planes.component';
 import { EjerciciosComponent } from './components/ejercicios/ejercicios.component';
 import { CobrosComponent } from './components/cobros/cobros.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     PlanesComponent,
     EjerciciosComponent,
     CobrosComponent,
-    TopbarComponent
+    TopbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
