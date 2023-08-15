@@ -1,12 +1,26 @@
-.container-fluid{
+.fade-right-animation {
+    animation: fadeRightAnimation 1s;
+}
+
+@keyframes fadeRightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container-fluid {
     background-color: #000000dd;
     min-height: 90vh;
     position: absolute;
     top: 45px;
-    z-index: -1;
 }
 
-.title{
+.title {
     color: #fff;
     font-size: 35px;
     margin-top: 25px;

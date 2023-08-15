@@ -1,21 +1,11 @@
 <app-topbar></app-topbar>
 
-<div class="container-fluid">
+<div class="container-fluid fade-right-animation">
     <h1 class="title">Ejercicios</h1>
     <div class="row">
-        <div class="col-md-4 col-sm-6 mb-4">
+        <div class="col-6 mb-4"  *ngFor="let ejercicio of ejercicios">
             <div class="d-flex justify-content-center">
-                <app-card [titulo]="'Biceps'" [urlImagen]="'https://www.entrenamientos.com/uploads/exercise/curl-de-biceps-con-barra-en-z-de-pie--init-pos-9988.png'"></app-card>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-4">
-            <div class="d-flex justify-content-center">
-                <app-card [titulo]="'Biceps'" [urlImagen]="'https://www.entrenamientos.com/uploads/exercise/curl-de-biceps-con-barra-en-z-de-pie--init-pos-9988.png'"></app-card>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-4">
-            <div class="d-flex justify-content-center">
-                <app-card [titulo]="'Biceps'" [urlImagen]="'https://www.entrenamientos.com/uploads/exercise/curl-de-biceps-con-barra-en-z-de-pie--init-pos-9988.png'"></app-card>
+                <app-card [titulo]="ejercicio.nombreEjercicio" [urlImagen]="ejercicio.urlImagen" [id]="ejercicio.idEjercicio"></app-card>
             </div>
         </div>
     </div>

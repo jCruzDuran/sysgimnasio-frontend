@@ -1,6 +1,8 @@
 <div class="card" style="width: 125px;">
-    <img class="card-img-top" src="{{urlImagen}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{titulo}}</h5>
-    </div>
+  <img class="card-img-top" src="{{urlImagen}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{titulo}}</h5>
+    <button class="btn btn-warning me-2"><i class="fas fa-pencil"></i></button>
+    <button class="btn btn-danger" (click)="borrar()"><i class="fas fa-trash"></i></button>
   </div>
+</div>
