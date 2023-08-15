@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { Ejercicio } from 'src/models/ejercicio';
 
 @Injectable({
@@ -21,7 +22,9 @@ export class EjerciciosService {
   constructor(private http: HttpClient) { }
 
   getEjercicios() {
-    return this.http.get(this.apiURL, this.httpOptions);
+    return this.http.get(this.apiURL, this.httpOptions).pipe(
+      map((response: any) => response as Ejercicio[])
+    );;
   }
 
   postEjercicios(ejercicio:Ejercicio) {

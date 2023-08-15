@@ -4,3 +4,8 @@
     justify-content: center; /* Centra horizontalmente */
   }
   
+  
+.topbar{
+  position: fixed; 
+  width: 100%;
+}
