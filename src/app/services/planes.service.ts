@@ -33,8 +33,9 @@ export class PlanesService {
     return this.http.put(this.apiURL, plan, this.httpOptions);
   }
 
-  deletePlanes() {
-    return this.http.delete(this.apiURL, this.httpOptions);
+  deletePlanes(idPlan: number) {
+    const url = `${this.apiURL}/${idPlan}`;
+    return this.http.delete(url, this.httpOptions);
   }
 
 }

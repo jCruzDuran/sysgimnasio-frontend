@@ -32,8 +32,9 @@ export class EjerciciosService {
     return this.http.put(this.apiURL, ejercicio, this.httpOptions);
   }
 
-  deleteEjercicios() {
-    return this.http.delete(this.apiURL, this.httpOptions);
+  deleteEjercicios(idEjercicio: number) {
+    const url = `${this.apiURL}/${idEjercicio}`;
+    return this.http.delete(url, this.httpOptions);
   }
 
 }

@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Rutina } from 'src/models/rutina';
+import { Cuota } from 'src/models/cuota';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RutinasService {
+export class CuotasService {
 
-  private apiURL = 'http://localhost:8080/api/rutinas';
+  private apiURL = 'http://localhost:8080/api/cuotas';
 
   token = localStorage.getItem('token') || '';
 
@@ -20,22 +20,21 @@ export class RutinasService {
 
   constructor(private http: HttpClient) { }
 
-  getRutinas() {
+  getCuotas() {
     return this.http.get(this.apiURL, this.httpOptions);
   }
 
-  postRutinas(rutina:Rutina) {
-    return this.http.post(this.apiURL, rutina, this.httpOptions);
+  postCuotas(cuota:Cuota) {
+    return this.http.post(this.apiURL, cuota, this.httpOptions);
   }
 
-  putRutinas(rutina:Rutina) {
-    return this.http.put(this.apiURL, rutina, this.httpOptions);
+  putCuotas(cuota:Cuota) {
+    return this.http.put(this.apiURL, cuota, this.httpOptions);
   }
 
-  deleteRutina(idRutina: number) {
-    const url = `${this.apiURL}/${idRutina}`;
+  deleteCuotas(idCuota: number) {
+    const url = `${this.apiURL}/${idCuota}`;
     return this.http.delete(url, this.httpOptions);
   }
-  
 
 }

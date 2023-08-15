@@ -1,3 +1,6 @@
-*{
-    text-decoration: none;
-}
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+  }
+  
