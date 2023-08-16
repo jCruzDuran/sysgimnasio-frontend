@@ -8,5 +8,9 @@ import { Plan } from 'src/models/plan';
 })
 export class TablaComponent {
   @Input() planes: Plan[] = [];
-    
+  private mostrarModal = false;
+
+  toggleModal(){
+    this.mostrarModal = !this.mostrarModal;
+  }
 }

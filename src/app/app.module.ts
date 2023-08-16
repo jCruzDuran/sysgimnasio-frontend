@@ -15,6 +15,7 @@ import { CobrosComponent } from './components/cobros/cobros.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { CardComponent } from './components/card/card.component';
 import { TablaComponent } from './components/tabla/tabla.component';
+import { AddEditPlanesComponent } from './components/add-edit-planes/add-edit-planes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TablaComponent } from './components/tabla/tabla.component';
     CobrosComponent,
     TopbarComponent,
     CardComponent,
-    TablaComponent
+    TablaComponent,
+    AddEditPlanesComponent
   ],
   imports: [
     BrowserModule,
