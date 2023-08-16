@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
+import { Plan } from 'src/models/plan';
 
 @Component({
   selector: 'app-tabla',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabla.component.css']
 })
 export class TablaComponent {
-
+  @Input() planes: Plan[] = [];
+    
 }

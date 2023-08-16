@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { Plan } from 'src/models/plan';
 
 @Injectable({
@@ -22,7 +23,9 @@ export class PlanesService {
   constructor(private http: HttpClient) { }
 
   getPlanes() {
-    return this.http.get(this.apiURL, this.httpOptions);
+    return this.http.get(this.apiURL, this.httpOptions).pipe(
+      map((response: any) => response as Plan[])
+    );
   }
 
   postPlanes(plan:Plan) {

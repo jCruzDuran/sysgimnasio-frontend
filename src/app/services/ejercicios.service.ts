@@ -24,7 +24,7 @@ export class EjerciciosService {
   getEjercicios() {
     return this.http.get(this.apiURL, this.httpOptions).pipe(
       map((response: any) => response as Ejercicio[])
-    );;
+    );
   }
 
   postEjercicios(ejercicio:Ejercicio) {
