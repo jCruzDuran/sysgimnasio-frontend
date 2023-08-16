@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Plan } from 'src/models/plan';
 
 @Component({
   selector: 'app-add-edit-planes',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-edit-planes.component.css']
 })
 export class AddEditPlanesComponent {
+  @Input() planes: Plan[] = [];
 
 }
