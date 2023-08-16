@@ -14,6 +14,7 @@ import { EjerciciosComponent } from './components/ejercicios/ejercicios.componen
 import { CobrosComponent } from './components/cobros/cobros.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { CardComponent } from './components/card/card.component';
+import { TablaComponent } from './components/tabla/tabla.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CardComponent } from './components/card/card.component';
     EjerciciosComponent,
     CobrosComponent,
     TopbarComponent,
-    CardComponent
+    CardComponent,
+    TablaComponent
   ],
   imports: [
     BrowserModule,

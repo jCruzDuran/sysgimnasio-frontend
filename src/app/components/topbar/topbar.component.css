@@ -1,3 +1,8 @@
+.navbar.bg-body-tertiary.topbar {
+  position: relative; /* Asegura que la posición sea relativa para aplicar z-index */
+  z-index: 9999; /* Ajusta el valor de z-index según tus necesidades */
+}
+
 .navbar-brand {
     display: flex;
     align-items: center; /* Centra verticalmente */
