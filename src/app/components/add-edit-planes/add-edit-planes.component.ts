@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Plan } from 'src/models/plan';
 
 @Component({
@@ -7,6 +7,10 @@ import { Plan } from 'src/models/plan';
   styleUrls: ['./add-edit-planes.component.css']
 })
 export class AddEditPlanesComponent {
-  @Input() planes: Plan[] = [];
+  @Input() plan!: Plan;
+
+  ngOnInit() {
+    console.log(this.plan);
+  }
 
 }
