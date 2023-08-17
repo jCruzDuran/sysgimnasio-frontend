@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-warning me-3" data-toggle="modal" [attr.data-target]="'#' + modalId">
+<button type="button" class="btn btn-outline-dark me-3" data-toggle="modal" [attr.data-target]="'#' + modalId">
   <i class="fas fa-edit"></i>
 </button>
 
@@ -25,7 +25,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" (click)="editarPlan()" data-dismiss="modal">Confirmar</button>
+        <button type="button" class="btn btn-warning" (click)="editarPlan()" data-dismiss="modal">Confirmar</button>
       </div>
     </div>
   </div>
