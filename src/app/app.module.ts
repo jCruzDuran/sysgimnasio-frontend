@@ -17,6 +17,7 @@ import { CardComponent } from './components/card/card.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { AddEditPlanesComponent } from './components/add-edit-planes/add-edit-planes.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { DataGridComponent } from './components/data-grid/data-grid.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
     CardComponent,
     TablaComponent,
     AddEditPlanesComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    DataGridComponent
   ],
   imports: [
     BrowserModule,
