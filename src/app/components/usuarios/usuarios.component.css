@@ -29,3 +29,12 @@
 p{
     color: white;
 }
+
+.form-control{
+    background-color: transparent;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: white;
+  }
