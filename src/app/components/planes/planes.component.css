@@ -26,6 +26,8 @@
     margin-top: 25px;
 }
 
-p{
-    color: white;
-}
+.create-plan-btn {
+    position: absolute;
+    bottom: 45px;
+    right: 20px;
+  }
