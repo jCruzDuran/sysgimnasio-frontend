@@ -1,25 +1,17 @@
-<table class="table align-middle bg-white">
-  <thead class="bg-light">
+<table class="table align-middle custom-transparent-table">
+  <thead>
     <tr>
-      <th>ID</th>
-      <th>Plan</th>
-      <th>Precio</th>
-      <th>Acción</th>
+      <th class="font-weight-bold">ID</th>
+      <th class="font-weight-bold">Plan</th>
+      <th class="font-weight-bold">Precio</th>
+      <th class="font-weight-bold">Acción</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let plan of planes">
-      <td>
-        <div class="d-flex align-items-center">
-          <p>{{ plan.idPlan }}</p>
-        </div>
-      </td>
-      <td>
-        <p class="fw-normal sm-1">{{ plan.nombrePlan }}</p>
-      </td>
-      <td>
-        <p>{{ plan.precio }}</p>
-      </td>
+      <td>{{ plan.idPlan }}</td>
+      <td>{{ plan.nombrePlan }}</td>
+      <td>{{ plan.precio }}</td>
       <td>
         <app-add-edit-planes [plan]="plan" [modalId]="'exampleModal' + plan.idPlan"></app-add-edit-planes>
       </td>
