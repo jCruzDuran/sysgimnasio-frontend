@@ -16,6 +16,7 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { CardComponent } from './components/card/card.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { AddEditPlanesComponent } from './components/add-edit-planes/add-edit-planes.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddEditPlanesComponent } from './components/add-edit-planes/add-edit-pl
     TopbarComponent,
     CardComponent,
     TablaComponent,
-    AddEditPlanesComponent
+    AddEditPlanesComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
