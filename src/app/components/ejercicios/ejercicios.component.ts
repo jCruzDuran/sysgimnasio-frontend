@@ -12,6 +12,12 @@ export class EjerciciosComponent implements OnInit {
   constructor(private ejerciciosService: EjerciciosService) {}
   
   public ejercicios: Ejercicio[] = [];
+  public nuevoEjercicio: Ejercicio = {
+    idEjercicio: 0,
+    nombreEjercicio: '',
+    urlImagen: '',
+    urlVideo: ''
+  };
 
   ngOnInit() {
     this.getEjercicios();
@@ -27,5 +33,4 @@ export class EjerciciosComponent implements OnInit {
       }
     );
   }
-
 }
