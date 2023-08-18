@@ -7,16 +7,26 @@ import { CheckTokenValidityService } from 'src/app/services/check-token-validity
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class IndexComponent {
+export class IndexComponent implements OnInit {
 
   constructor(private router:Router, private checkTokenService:CheckTokenValidityService) {}
 
   ngOnInit() {
 
     const token = localStorage.getItem('token');
-    
-    if(token==null || !this.checkTokenService.checkTokenValidity(token)) {
-      this.router.navigate(['/login']);
+
+    if(!token)
+    {
+      this.router.navigate(['/login'])
+    }else
+    {
+      this.checkTokenService.checkTokenValidity(token).subscribe(
+        (isValid) => {
+          if(!isValid) {
+            this.router.navigate(['/login']);
+          } 
+        }
+      );
     }
   }
 }
