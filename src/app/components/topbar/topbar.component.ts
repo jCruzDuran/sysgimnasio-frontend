@@ -12,6 +12,6 @@ export class TopbarComponent {
 
   logout() {
     localStorage.setItem('token', '');
-    this.router.navigate(['../login'])
+    this.router.navigate(['/login'])
   }
 }
