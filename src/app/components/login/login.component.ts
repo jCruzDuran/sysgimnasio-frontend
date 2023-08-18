@@ -10,14 +10,7 @@ import { PlanesService } from 'src/app/services/planes.service';
 })
 export class LoginComponent {
 
-  constructor(private loginService:LoginService, private router:Router, planesService:PlanesService) 
-  {
-    planesService.getPlanes().subscribe(
-      (data) => {
-        router.navigate(['/main']);
-      }
-    )
-  }
+  constructor(private loginService:LoginService, private router:Router) { }
 
   email:string = "";
   password:string = "";

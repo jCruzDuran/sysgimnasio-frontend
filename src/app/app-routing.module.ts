@@ -9,7 +9,8 @@ import { CobrosComponent } from './components/cobros/cobros.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
+  {path: '', component: IndexComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'main', component: IndexComponent},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'rutina', component: RutinaComponent},
