@@ -1,0 +1,33 @@
+<button type="button" class="btn btn-outline-warning create-ejercicio-btn" (click)="agregarEjercicio()" data-toggle="modal" [attr.data-target]="'#' + modalId">
+    Agregar ejercicio
+  </button>  
+
+  <div class="modal fade" [id]="modalId" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Agregar ejercicio</h1>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Nombre del ejercicio:</label>
+              <input type="text" class="form-control" id="recipient-name" [(ngModel)]="ejercicio.nombreEjercicio" name="nombreEjercicio">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Link de la imagen:</label>
+              <input type="text" class="form-control" id="recipient-name" [(ngModel)]="ejercicio.urlImagen" name="urlImagen">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-warning" (click)="agregarEjercicio()" data-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
