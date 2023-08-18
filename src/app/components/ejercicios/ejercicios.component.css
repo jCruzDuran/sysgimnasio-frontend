@@ -25,3 +25,9 @@
     font-size: 35px;
     margin-top: 25px;
 }
+
+.create-ejercicio-btn {
+    position: absolute;
+    bottom: 45px;
+    right: 20px;
+  }
