@@ -9,14 +9,14 @@ import { CobrosComponent } from './components/cobros/cobros.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
-  {path: '', component: IndexComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'main', component: IndexComponent},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'rutina', component: RutinaComponent},
   {path: 'planes', component: PlanesComponent},
   {path: 'ejercicios', component: EjerciciosComponent},
   {path: 'cobros', component: CobrosComponent},
+  {path: 'index', component: IndexComponent},
+  {path: '', component: IndexComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
