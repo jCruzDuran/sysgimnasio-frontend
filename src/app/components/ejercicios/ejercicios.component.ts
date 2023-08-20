@@ -33,6 +33,11 @@ export class EjerciciosComponent implements OnInit {
     );
   }
 
+  handleEjercicioAdded(ejercicio: Ejercicio)
+  {
+    this.ejercicios.push(ejercicio);
+  }
+
   handleEjercicioDeleted(deletedId: number) {
     this.ejercicios = this.ejercicios.filter(ejercicio => ejercicio.idEjercicio !== deletedId);
   }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { EjerciciosService } from 'src/app/services/ejercicios.service';
 import { Ejercicio } from 'src/models/ejercicio';
 
@@ -11,12 +11,13 @@ export class AddNewEjercicioComponent {
 
   @Input() ejercicio: Ejercicio;
   @Input() modalId: string;
+  @Output() ejercicioAgregado = new EventEmitter<Ejercicio>()
 
   constructor(private ejercicioServices:EjerciciosService){}
 
   agregarEjercicio(){
     this.ejercicioServices.postEjercicios(this.ejercicio).subscribe(
-      (response)=> console.log(response),
+      (response)=> this.ejercicioAgregado.emit(this.ejercicio),
       (error)=> console.log(error)
     )
   }
