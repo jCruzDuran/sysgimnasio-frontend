@@ -8,9 +8,8 @@ import { Ejercicio } from 'src/models/ejercicio';
   styleUrls: ['./ejercicios.component.css']
 })
 export class EjerciciosComponent implements OnInit {
-  
   constructor(private ejerciciosService: EjerciciosService) {}
-  
+
   public ejercicios: Ejercicio[] = [];
   public nuevoEjercicio: Ejercicio = {
     idEjercicio: 0,
@@ -32,5 +31,14 @@ export class EjerciciosComponent implements OnInit {
         console.error('Error fetching ejercicios:', error);
       }
     );
+  }
+
+  handleEjercicioAdded(ejercicio: Ejercicio)
+  {
+    this.ejercicios.push(ejercicio);
+  }
+
+  handleEjercicioDeleted(deletedId: number) {
+    this.ejercicios = this.ejercicios.filter(ejercicio => ejercicio.idEjercicio !== deletedId);
   }
 }
