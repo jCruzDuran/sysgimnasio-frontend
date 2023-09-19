@@ -18,7 +18,6 @@ import { TablaComponent } from './components/tabla/tabla.component';
 import { AddEditPlanesComponent } from './components/add-edit-planes/add-edit-planes.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { AddNewEjercicioComponent } from './components/add-new-ejercicio/add-new-ejercicio.component';
-import { DataGridComponent } from './components/data-grid/data-grid.component';
 import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
@@ -36,8 +35,7 @@ import { AgGridModule } from 'ag-grid-angular';
     TablaComponent,
     AddEditPlanesComponent,
     UsuariosComponent,
-    AddNewEjercicioComponent,
-    DataGridComponent
+    AddNewEjercicioComponent
   ],
   imports: [
     BrowserModule,
